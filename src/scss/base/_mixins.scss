@@ -46,3 +46,20 @@
     gap: $espaciado;
     grid-template-columns: repeat($columnas, 1fr);
 }
+
+@mixin contenedor{
+    //Si El Contenido Puede Medir 140 Rem Lo Hará, De Lo Contrario Ocupará El 95% De La Pantalla
+    //Es Lo Mismo Que Tener max-width: 140rem; y width: 95%; Pero En Una Sola Linea
+    width: min(95%, 140rem);
+    margin: 0 auto;
+}
+
+@mixin contenedor-md{
+    width: min(95%, 80rem);
+    margin: 0 auto;
+}
+
+@mixin contenedor-sm{
+    width: min(95%, 60rem);
+    margin: 0 auto;
+}
