@@ -1,0 +1,44 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.titulo{
+    color: v.$negro;
+    text-align: center;
+    @include m.texto-fluido(2rem, 3rem);
+    font-weight: v.$bold;
+    margin: 1.5rem 0 0 0;
+    padding: 0;
+}
+
+.cards{
+    @include m.contenedor();
+    &__grid{
+        @include m.grid(3, 1rem);
+    }
+    &__card{
+
+    }
+    &__img{
+        width: 30rem;
+        height: 28rem;
+    }
+}
+
+.acciones{
+
+    &__flex{
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+    &__formulario{
+
+    }
+    &__mensaje{
+
+        &--svg{
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+}
