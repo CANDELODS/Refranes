@@ -11,25 +11,24 @@
 
             <a href="#" class="navegacion__menu">
                 <img class="navegacion__enlace-logosvg" src="/build/img/svgMenu.svg" alt="Logo Menu">
-                <p class="navegacion__enlace-texto-enlace">Menú</p>
+                <p class="navegacion__enlace-texto-menu">Menú</p>
             </a>
         </div> <!--.navegacion__izquierda-->
 
         <div class="navegacion__medio">
             <div class="navegacion__busqueda">
                 <input type="text" class="navegacion__medio navegacion__medio-buscar" placeholder="Busca Un Refrán">
-                <img class="navegacion__enlace-logosvg navegacion__enlace-logosvg--lupa" src="/build/img/svgLupa.svg" alt="Logo Menu">
             </div>
         </div> <!--.navegacion__medio-->
 
         <div class="navegacion__derecha">
             <a href="#" class="navegacion__enlace">
-                <p class="navegacion__enlace-texto">Sobre Nosotros</p>
+                <p class="navegacion__enlace-texto">Nosotros</p>
                 <img class="navegacion__enlace-logosvg" src="/build/img/svgNosotros.svg" alt="Logo Menu">
             </a>
             <a href="#" class="navegacion__enlace">
-                <p class="navegacion__enlace-texto">Mi Cuenta</p>
-                <img class="navegacion__enlace-logosvg" src="/build/img/svgUsuario.svg" alt="Logo Menu">
+                <p class="navegacion__enlace-texto">Cuenta</p>
+                <img class="navegacion__enlace-logosvg navegacion__enlace-logosvg--user" src="/build/img/svgUsuario.svg" alt="Logo Menu">
             </a>
         </div> <!--.navegacion__derecha-->
 

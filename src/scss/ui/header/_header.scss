@@ -1,0 +1,109 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header{
+    background-color: v.$azul;
+    padding: .5rem 1rem;
+}
+
+.navegacion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__izquierda{
+        display: flex;
+        align-items: center;
+        @include m.tablet{
+            gap: 2rem;
+
+        }
+    }
+    &__logo{
+        width: 6rem;
+    }
+    &__menu{
+        display: flex;
+        align-items: center;
+        color: v.$blanco;
+        font-size: 1.6rem;
+        font-weight: v.$bold;
+        cursor: pointer;
+        gap: .5rem;
+    }
+    &__enlace-logosvg{
+        width: 3rem;
+        height: 2rem;
+        &--user{
+            height: 3rem;
+        }
+
+        @include m.tablet{
+            width: 3rem;
+            height: 2rem;
+            &--user{
+                height: 3rem;
+            }
+        }
+
+    }
+    &__enlace-texto{
+        font-size: 1.4rem;
+        margin: 0;
+        @include m.tablet{
+            font-size: 1.8rem;
+            margin: 0;
+        }
+
+    }
+    &__medio{
+        display: none;
+        @include m.tablet{
+            display: inline-block;
+            flex-grow: 1;
+            text-align: center;
+        }
+    }
+    &__busqueda{
+    }
+    &__medio-buscar{
+        display: none;
+        padding: .8rem;
+        margin: .6rem 0 0 0;
+        border-radius: .4rem;
+        border: 1px solid #ccc;
+        background-color: v.$background;
+        color: v.$blanco;
+        @include m.tablet{
+            display: inline-block;
+           width: 30rem;
+        }
+
+        &::placeholder{
+            color: v.$blanco;
+        }
+    }
+    &__derecha{
+        display: flex;
+        align-items: center;
+        margin-left: .2rem;
+    }
+    &__enlace{
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 1.6rem;
+        text-decoration: none;
+        gap: .5rem;
+        margin-right: 1rem;
+
+        @include m.tablet{
+            gap: .5rem;
+            margin-right: 2rem;
+    
+        }
+    }
+
+
+
+}
