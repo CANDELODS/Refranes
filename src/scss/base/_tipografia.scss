@@ -14,6 +14,11 @@ h2 {
 h3 {
     font-size: 3rem;
 }
-.text-center {
-    text-align: center;
+
+//Selector De Atributos ($= Significa Que Terminan En Lo Que Pongamos En Las Comillas "")
+[class$="__titulo-card"]{
+    @include m.titulo-card;
+}
+[class$="__descripcion-card"]{
+    @include m.descripcion-card;
 }

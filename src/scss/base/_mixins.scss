@@ -64,6 +64,11 @@
     margin: 0 auto;
 }
 
+@mixin contenedor-smCard{
+    width: min(60%, 60rem);
+    margin: 0 auto;
+}
+
 @mixin texto-fluido($min, $max){
     //El Valor De En Medio Es El Que No Aplica Ni En $Min Ni $Max Sin Embargo Será El Más Común (Valor Deseado)
     font-size: clamp($min, -0.8rem + 10vw, $max);
@@ -73,4 +78,20 @@
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+@mixin formatear{
+    margin: 0;
+    padding: 0;
+}
+
+@mixin titulo-card{
+    color: v.$azul;
+    text-align: left;
+    @include formatear();
+    margin-top: .5rem;
+}
+
+@mixin descripcion-card{
+    font-size: 1.3rem;
 }
