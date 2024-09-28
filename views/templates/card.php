@@ -11,11 +11,11 @@
     <div class="acciones">
         <div class="acciones__flex">
             <form action="" class="acciones__formulario acciones__formulario--like">
-                <input alt="Boton Me Gusta" src="<?php echo $_ENV['HOST'] . '/build/img/likeSvg.svg'; ?>" type="image">
+                <input class="acciones__input" alt="Boton Me Gusta" src="<?php echo $_ENV['HOST'] . '/build/img/likeSvg.svg'; ?>" type="image">
                 <p class="acciones__cantidad-reacciones acciones__cantidad-reacciones--like">1000</p>
             </form>
             <form action="" class="acciones__formulario acciones__formulario--dislike">
-                <input alt="Boton Me Gusta" src="<?php echo $_ENV['HOST'] . '/build/img/dislikeSvg.svg'; ?>" type="image">
+                <input class="acciones__input" alt="Boton Me Gusta" src="<?php echo $_ENV['HOST'] . '/build/img/dislikeSvg.svg'; ?>" type="image">
                 <p class="acciones__cantidad-reacciones">1000</p>
             </form>
             <a href="#" class="acciones__mensaje">

@@ -1,14 +1,27 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
+body{
+    overflow: scroll;
+    overflow-x: hidden;
+    &::-webkit-scrollbar { //Todo El Elemento ScrollBar
+        width: 1rem;
+    }
+
+    &::-webkit-scrollbar-thumb { //Solo La Barra
+        background-color: v.$azul;
+        border-radius: .1rem;
+    }
+}
 .titulo {
     color: v.$negro;
     text-align: center;
     @include m.texto-fluido(2rem, 3rem);
     font-weight: v.$bold;
-    margin: 1.5rem 0 0 0;
+    margin: 1.5rem 0 2rem 0;
     padding: 0;
 }
+
 
 .cards {
     @include m.contenedor();
@@ -17,17 +30,21 @@
         @include m.grid(1, 1rem);
 
         @include m.tablet {
-            @include m.grid(3, 1rem);
+            @include m.grid(2, 1rem);
         }
 
-        @include m.xl_desktop {
-            @include m.grid(4, 1rem);
+        @include m.desktop {
+            @include m.grid(2, 1rem);
+        }
+
+        @include m.xl-desktop {
+            @include m.grid(3, 1rem);
         }
     }
 }
 
 .card {
-    @include m.contenedor-sm();
+    @include m.contenedor-smCard();
     border-radius: 10px;
     background: v.$blanco;
     box-shadow: 6px 6px 35px 4px rgba(0, 0, 0, 0.25);
@@ -43,6 +60,10 @@
         width: 95%;
         margin: 0 auto;
     }
+    
+    @include m.desktop{
+        width: 80%;
+    }
 
     &:hover {
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);  // Sombra menos intensa al hacer hover
@@ -53,32 +74,61 @@
         height: auto;  // Mantiene la proporción de la imagen
         border-radius: 10px;
     }
+
+    &__descripcion-card{
+        display: -webkit-box; //Caja Virutal, Nos Permite Acceder A Las Propiedades De Abajo
+        -webkit-line-clamp: 2; //Seleccionamos Cuantas Lineas Queremos Cortar
+        -webkit-box-orient: vertical;
+        overflow: hidden; //Lo Que No Esté Dentro De La Caja Virtual No Se Mostrará
+
+        @include m.tablet{
+            display: inherit;
+        }
+    }
     
 }
 
 .acciones {
     background-color: v.$gris;
     padding: 1rem;  // Ajusta el padding en pantallas más pequeñas.
-    border-radius: 0 0 10px 10px; // Mantén los bordes redondeados de la card.
+    border-radius: 0 0 1rem 1rem; // Mantén los bordes redondeados de la card.
     @include m.tablet {
         padding: 1rem 2rem;  // Añade padding a los lados para expandir el fondo.
     }
     &__flex {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        gap: 2rem;
+        gap: 1rem;
+        @include m.tablet{
+            gap: 2rem;
+        }
     }
 
     &__formulario {
         display: flex;
         align-items: center;
-        gap: .5rem;
         margin: 0;
         padding: 0;
 
+
         &--dislike {
             margin-top: .5rem;
+        }
+
+        @include m.tablet{
+            gap: .5rem;
+            
+            &--dislike {
+                margin-top: .5rem;
+            }
+        }
+    }
+
+    &__input{
+        width: 2.5rem;
+        @include m.tablet{
+            width: inherit;
         }
     }
 
@@ -86,24 +136,35 @@
         @include m.formatear();
         color: v.$negro;
         font-weight: v.$bold;
-        font-size: 1.4rem;
-
+        font-size: 1rem;
         &--like {
             margin-top: .6rem;
+        }
+
+        @include m.tablet{
+        font-size: 1.4rem;
+
         }
     }
 
     &__mensaje {
 
         &--svg {
-            width: 2.5rem;
-            height: 2.5rem;
+            width: 2rem;
+            height: 2rem;
+        }
+
+        @include m.tablet{
+            &--svg {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
         }
     }
 
     &__comentarios {
         margin: 0;
-        font-size: 1.3rem;
+        font-size: .9rem;
 
         @include m.tablet {
             font-size: 1.1rem;
