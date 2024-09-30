@@ -368,167 +368,6 @@ body::-webkit-scrollbar-thumb {
   padding: 0;
 }
 
-.cards {
-  width: min(95%, 140rem);
-  margin: 0 auto;
-}
-.cards__grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(1, 1fr);
-}
-@media (min-width: 768px) {
-  .cards__grid {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (min-width: 1024px) {
-  .cards__grid {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (min-width: 1200px) {
-  .cards__grid {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.card {
-  width: min(60%, 60rem);
-  margin: 0 auto;
-  border-radius: 10px;
-  background: #FFFFFF;
-  box-shadow: 6px 6px 35px 4px rgba(0, 0, 0, 0.25);
-  transition: box-shadow 0.3s ease;
-  padding: 1rem;
-}
-@media (min-width: 480px) {
-  .card {
-    width: 50%;
-    margin: 0 auto;
-  }
-}
-@media (min-width: 768px) {
-  .card {
-    width: 95%;
-    margin: 0 auto;
-  }
-}
-@media (min-width: 1024px) {
-  .card {
-    width: 80%;
-  }
-}
-.card:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-.card__img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-.card__descripcion-card {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-@media (min-width: 768px) {
-  .card__descripcion-card {
-    display: inherit;
-  }
-}
-
-.acciones {
-  background-color: #DADADA;
-  padding: 1rem;
-  border-radius: 0 0 1rem 1rem;
-}
-@media (min-width: 768px) {
-  .acciones {
-    padding: 1rem 2rem;
-  }
-}
-.acciones__flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-@media (min-width: 768px) {
-  .acciones__flex {
-    gap: 2rem;
-  }
-}
-.acciones__formulario {
-  display: flex;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-}
-.acciones__formulario--dislike {
-  margin-top: 0.5rem;
-}
-@media (min-width: 768px) {
-  .acciones__formulario {
-    gap: 0.5rem;
-  }
-  .acciones__formulario--dislike {
-    margin-top: 0.5rem;
-  }
-}
-.acciones__input {
-  width: 2.5rem;
-}
-@media (min-width: 768px) {
-  .acciones__input {
-    width: inherit;
-  }
-}
-.acciones__cantidad-reacciones {
-  margin: 0;
-  padding: 0;
-  color: #1a1b15;
-  font-weight: 700;
-  font-size: 1rem;
-}
-.acciones__cantidad-reacciones--like {
-  margin-top: 0.6rem;
-}
-@media (min-width: 768px) {
-  .acciones__cantidad-reacciones {
-    font-size: 1.4rem;
-  }
-}
-.acciones__mensaje--svg {
-  width: 2rem;
-  height: 2rem;
-}
-@media (min-width: 768px) {
-  .acciones__mensaje--svg {
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-}
-.acciones__comentarios {
-  margin: 0;
-  font-size: 0.9rem;
-}
-@media (min-width: 768px) {
-  .acciones__comentarios {
-    font-size: 1.1rem;
-  }
-}
-.acciones__span {
-  font-weight: 700;
-}
-
 .footer {
   background-color: #007DF4;
   margin-top: 5rem;
@@ -549,6 +388,9 @@ body::-webkit-scrollbar-thumb {
 .header {
   background-color: #007DF4;
   padding: 0.5rem 1rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 .navegacion {
@@ -650,5 +492,186 @@ body::-webkit-scrollbar-thumb {
     gap: 0.5rem;
     margin-right: 2rem;
   }
+}
+
+.cards {
+  width: min(95%, 140rem);
+  margin: 0 auto;
+}
+.cards__grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (min-width: 768px) {
+  .cards__grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .cards__grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .cards__grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  width: min(60%, 60rem);
+  margin: 0 auto;
+  border-radius: 10px;
+  background: #FFFFFF;
+  box-shadow: 6px 6px 35px 4px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.3s ease;
+  padding: 0.5rem;
+}
+@media (min-width: 480px) {
+  .card {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 768px) {
+  .card {
+    width: 95%;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  .card__verMas-telefono {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .card {
+    width: 80%;
+  }
+}
+.card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.card__img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.card__titulo-card {
+  font-size: clamp(0.5rem, -0.8rem + 10vw, 1rem);
+  margin-top: 0.2rem;
+}
+@media (min-width: 768px) {
+  .card__titulo-card {
+    font-size: clamp(1rem, -0.8rem + 10vw, 2rem);
+    margin-top: 0.5rem;
+  }
+}
+.card__descripcion-card {
+  display: none;
+}
+@media (min-width: 768px) {
+  .card__descripcion-card {
+    display: inherit;
+  }
+}
+.card__verMas-telefono {
+  margin: 0;
+  padding: 0;
+  font-size: clamp(0.3rem, -0.8rem + 10vw, 1rem);
+  text-decoration: none;
+  color: rgba(247, 136, 9, 0.9921568627);
+  margin-top: 1rem;
+}
+
+.acciones {
+  background-color: #DADADA;
+  padding: 1rem;
+  border-radius: 0 0 1rem 1rem;
+  display: none;
+}
+@media (min-width: 768px) {
+  .acciones {
+    padding: 1rem 2rem;
+    display: inherit;
+  }
+}
+.acciones__flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .acciones__flex {
+    gap: 2rem;
+  }
+}
+.acciones__formulario {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.acciones__formulario--dislike {
+  margin-top: 0.5rem;
+}
+@media (min-width: 768px) {
+  .acciones__formulario {
+    gap: 0.5rem;
+  }
+  .acciones__formulario--dislike {
+    margin-top: 0.5rem;
+  }
+}
+.acciones__input {
+  width: 2.5rem;
+}
+@media (min-width: 768px) {
+  .acciones__input {
+    width: inherit;
+  }
+}
+.acciones__cantidad-reacciones {
+  margin: 0;
+  padding: 0;
+  color: #1a1b15;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.acciones__cantidad-reacciones--like {
+  margin-top: 0.6rem;
+}
+@media (min-width: 768px) {
+  .acciones__cantidad-reacciones {
+    font-size: 1.4rem;
+  }
+}
+.acciones__mensaje--svg {
+  width: 2rem;
+  height: 2rem;
+}
+@media (min-width: 768px) {
+  .acciones__mensaje--svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+.acciones__comentarios {
+  margin: 0;
+  font-size: 0.9rem;
+}
+@media (min-width: 768px) {
+  .acciones__comentarios {
+    font-size: 1.1rem;
+  }
+}
+.acciones__span {
+  font-weight: 700;
 }
 /*# sourceMappingURL=app.css.map */

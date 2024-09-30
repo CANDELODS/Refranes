@@ -8,6 +8,7 @@
     <h4 class="card__titulo-card">No Hay Peor Ciego Que Aquel Que No Quiere Ver</h4>
     <p class="card__descripcion-card">Hace referencia a cuando sabemos que está ocurriendo algo, pero aún así hacemos como que no está pasando nada así esto nos afecte.</p>
 
+    <a href="#" class="card__verMas-telefono">Ver Más</a>
     <div class="acciones">
         <div class="acciones__flex">
             <form action="" class="acciones__formulario acciones__formulario--like">

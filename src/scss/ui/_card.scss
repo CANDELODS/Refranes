@@ -1,0 +1,180 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.cards {
+    @include m.contenedor();
+
+    &__grid {
+        @include m.grid(2, 1rem);
+
+        @include m.tablet {
+            @include m.grid(2, 1rem);
+        }
+
+        @include m.desktop {
+            @include m.grid(2, 1rem);
+        }
+
+        @include m.xl-desktop {
+            @include m.grid(3, 1rem);
+        }
+    }
+}
+
+.card {
+    @include m.contenedor-smCard();
+    border-radius: 10px;
+    background: v.$blanco;
+    box-shadow: 6px 6px 35px 4px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.3s ease;
+    padding: .5rem;
+    @include m.telefono {
+        width: 50%;  // Reduce el tamaño de la card en móviles.
+        margin: 0 auto;
+    }
+
+    @include m.tablet{
+        width: 95%;
+        margin: 0 auto;
+        padding: 1rem;
+
+        
+        &__verMas-telefono{
+            display: none;
+        }
+    }
+    
+    @include m.desktop{
+        width: 80%;
+    }
+
+    &:hover {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);  // Sombra menos intensa al hacer hover
+    }
+
+    &__img {
+        width: 100%;  // Asegura que la imagen ocupe el 100% del ancho del contenedor  
+        height: auto;  // Mantiene la proporción de la imagen
+        border-radius: 10px;
+        
+    }
+
+    &__titulo-card{
+        @include m.texto-fluido(.5rem, 1rem);
+        margin-top: .2rem;
+
+        @include m.tablet{
+            @include m.texto-fluido(1rem, 2rem);
+            margin-top: .5rem;
+            
+        }
+    }
+
+    &__descripcion-card{
+        display: none;
+
+        @include m.tablet{
+            display: inherit;
+        }
+    }
+
+    &__verMas-telefono{
+        @include m.formatear();
+        @include m.texto-fluido(.3rem, 1rem);
+        text-decoration: none;
+        color: v.$naranja;
+        margin-top: 1rem;
+    }
+    
+}
+
+.acciones {
+    background-color: v.$gris;
+    padding: 1rem;  // Ajusta el padding en pantallas más pequeñas.
+    border-radius: 0 0 1rem 1rem; // Mantén los bordes redondeados de la card.
+    display: none;
+    @include m.tablet {
+        padding: 1rem 2rem;  // Añade padding a los lados para expandir el fondo.
+        display: inherit;
+    }
+    &__flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // gap: 1rem;
+        @include m.tablet{
+            gap: 2rem;
+        }
+    }
+
+    &__formulario {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+
+
+        &--dislike {
+            margin-top: .5rem;
+        }
+
+        @include m.tablet{
+            gap: .5rem;
+            
+            &--dislike {
+                margin-top: .5rem;
+            }
+        }
+    }
+
+    &__input{
+        width: 2.5rem;
+        @include m.tablet{
+            width: inherit;
+        }
+    }
+
+    &__cantidad-reacciones {
+        @include m.formatear();
+        color: v.$negro;
+        font-weight: v.$bold;
+        font-size: 1rem;
+        &--like {
+            margin-top: .6rem;
+        }
+
+        @include m.tablet{
+        font-size: 1.4rem;
+
+        }
+    }
+
+    &__mensaje {
+
+        &--svg {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        @include m.tablet{
+            &--svg {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+        }
+    }
+
+    &__comentarios {
+        margin: 0;
+        font-size: .9rem;
+
+        @include m.tablet {
+            font-size: 1.1rem;
+        }
+
+    }
+
+    &__span {
+        font-weight: v.$bold;
+    }
+}
