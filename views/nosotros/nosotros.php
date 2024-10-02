@@ -8,12 +8,14 @@
             <img class="nosotros__img" loading="lazy" width="200" height="300" src="<?php echo $_ENV['HOST'] . '/build/img/nosotrosImg.webp'; ?>" alt="Imagen Refran">
         </picture>
 
-        <p class="nosotros__parrafo nosotros__parrafo-uno">
-            Somos un equipo apasionado por preservar y compartir la riqueza cultural de Colombia a través de nuestro sitio web dedicado a los refranes colombianos. Nuestro objetivo es celebrar la sabiduría popular, la creatividad lingüística y la conexión con nuestras raíces.
-        </p>
-        <p class="nosotros__parrafo nosotros__parrafo-dos">
-            Cada refrán que presentamos es una ventana a la historia, las tradiciones y la forma de pensar de nuestro pueblo. Nos enorgullece poder compartir esta herencia con el mundo y fomentar una mayor apreciación por la diversidad y la riqueza de la cultura colombiana.
-        </p>
+        <div class="nosotros__parrafos">
+            <p>
+                Somos un equipo apasionado por preservar y compartir la riqueza cultural de Colombia a través de nuestro sitio web dedicado a los refranes colombianos. Nuestro objetivo es celebrar la sabiduría popular, la creatividad lingüística y la conexión con nuestras raíces.
+            </p>
+            <p>
+                Cada refrán que presentamos es una ventana a la historia, las tradiciones y la forma de pensar de nuestro pueblo. Nos enorgullece poder compartir esta herencia con el mundo y fomentar una mayor apreciación por la diversidad y la riqueza de la cultura colombiana.
+            </p>
+        </div>
 
     </div>
 

@@ -700,8 +700,8 @@ body::-webkit-scrollbar-thumb {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 50% 50%;
     grid-template-areas: "imagen parrafos" "imagen parrafos";
+    align-items: center;
   }
 }
 .nosotros__img {
@@ -710,23 +710,22 @@ body::-webkit-scrollbar-thumb {
 @media (min-width: 768px) {
   .nosotros__img {
     grid-area: imagen;
-    width: 100%;
+    width: 95%;
+    margin-left: 1rem;
   }
 }
-.nosotros__parrafo {
+.nosotros__parrafos {
   width: min(95%, 140rem);
   margin: 0 auto;
   font-size: 1.6rem;
   text-align: center;
 }
 @media (min-width: 768px) {
-  .nosotros__parrafo {
+  .nosotros__parrafos {
     grid-area: parrafos;
-  }
-}
-@media (min-width: 768px) {
-  .nosotros__parrafo--uno {
-    margin-top: 10rem;
+    font-size: 2rem;
+    text-align: justify;
+    margin-right: 3rem;
   }
 }
 .nosotros__frase {
@@ -735,11 +734,23 @@ body::-webkit-scrollbar-thumb {
   background-color: rgba(26, 27, 21, 0.4745098039);
   border-radius: 1rem;
 }
+@media (min-width: 768px) {
+  .nosotros__frase {
+    padding: 2rem;
+  }
+}
 .nosotros__parrafo-frase {
+  margin: 0;
+  padding: 0;
   color: #FFFFFF;
   font-weight: 700;
   font-size: 1.6rem;
   padding: 0.5rem;
   text-align: center;
+}
+@media (min-width: 768px) {
+  .nosotros__parrafo-frase {
+    font-size: 2rem;
+  }
 }
 /*# sourceMappingURL=app.css.map */
