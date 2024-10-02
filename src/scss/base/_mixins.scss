@@ -36,7 +36,7 @@
     display: inline-block;
 
     &:hover {
-        background-color: darken( $bgColor, 10% );
+        background-color: adjust( $bgColor, -10% );
         cursor: pointer;
     }
 }

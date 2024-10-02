@@ -28,7 +28,7 @@
                 <p class="navegacion__enlace-texto">Nosotros</p>
                 <img class="navegacion__enlace-logosvg" src="/build/img/svgNosotros.svg" alt="Logo Menu">
             </a>
-            <a href="#" class="navegacion__enlace">
+            <a href="/login" class="navegacion__enlace">
                 <p class="navegacion__enlace-texto">Cuenta</p>
                 <img class="navegacion__enlace-logosvg navegacion__enlace-logosvg--user" src="/build/img/svgUsuario.svg" alt="Logo Menu">
             </a>

@@ -685,6 +685,105 @@ body::-webkit-scrollbar-thumb {
   font-weight: 700;
 }
 
+.formulario {
+  width: min(95%, 60rem);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.formulario__barra {
+  width: min(95%, 140rem);
+  margin: 0 auto;
+  height: 0.07rem;
+  width: 100%;
+  background-color: #D9D9D9;
+  margin-bottom: 4rem;
+}
+.formulario__campo {
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+.formulario__check {
+  margin-left: 2rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+.formulario__enlace {
+  text-decoration: none;
+  color: #007DF4;
+}
+.formulario__input {
+  width: 100%;
+  border: 1px solid #007DF4;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+.formulario__input::placeholder {
+  font-size: 1.6rem;
+}
+.formulario__centro {
+  display: flex;
+  gap: 17rem;
+  margin: 2rem 0;
+}
+.formulario__submit {
+  background-color: #007DF4;
+  padding: 1.5rem 4rem;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  width: 80%;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.formulario__submit:hover {
+  background-color: adjust(#007DF4, -10%);
+  cursor: pointer;
+}
+
+.login {
+  width: min(95%, 60rem);
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  border: 1px solid #007DF4;
+  border-radius: 5rem;
+}
+.login__flex-arriba {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login__logo {
+  width: 6rem;
+}
+.login__titulo {
+  color: #007DF4;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.login__acciones {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.login__parrafo {
+  color: #7D7D7D;
+}
+.login__enlace {
+  text-decoration: none;
+  color: #007DF4;
+}
+
 .nosotros__titulo {
   text-align: center;
   font-size: 3.5rem;

@@ -1,0 +1,34 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.login{
+    @include m.contenedor-sm;
+    margin-top: 1.5rem;
+    border: 1px solid v.$azul;
+    border-radius: 5rem;
+    &__flex-arriba{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__logo{
+        width: 6rem;
+    }
+    &__titulo{
+        color: v.$azul;
+        text-transform: uppercase;
+        font-weight: v.$bold;
+    }
+    &__acciones{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    &__parrafo{
+        color: #7D7D7D;
+    }
+    &__enlace{
+        text-decoration: none;
+        color: v.$azul;
+    }
+}

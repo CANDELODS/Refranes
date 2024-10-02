@@ -1,0 +1,54 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.formulario{
+    @include m.contenedor-sm;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    &__barra{
+        @include m.contenedor;
+        height: .07rem;
+        width: 100%;
+        background-color: #D9D9D9;
+        margin-bottom: 4rem;
+    }
+    &__campo{
+        display: flex;
+        align-items: center;
+        width: 80%;
+    }
+    &__check{
+        margin-left: 2rem;
+        font-weight: v.$bold;
+        font-size: 1.6rem;
+    }
+    &__enlace{
+        text-decoration: none;
+        color: v.$azul;
+    }
+    &__input{
+        width: 100%;
+        border: 1px solid v.$azul;
+        border-radius: 1rem;
+        padding: .5rem;
+
+        &::placeholder{
+            font-size: 1.6rem;
+        }
+    }
+    &__centro{
+        display: flex;
+        gap: 17rem;
+        margin: 2rem 0;
+    }
+    &__submit{
+        @include m.boton(v.$azul, v.$blanco);
+        width: 80%;
+        border-radius: 1rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+}
