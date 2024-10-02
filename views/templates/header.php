@@ -3,11 +3,13 @@
     <nav class="navegacion">
 
         <div class="navegacion__izquierda">
-            <picture>
-                <source srcset="<?php echo $_ENV['HOST'] . '/build/img/logo.webp'; ?>" type="image/webp">
-                <source srcset="<?php echo $_ENV['HOST'] . '/build/img/logo.png'; ?>" type="image/png">
-                <img class="navegacion__logo" loading="lazy" width="200" height="300" src="<?php echo $_ENV['HOST'] . '/build/img/logo.png'; ?>" alt="Logo Refranes">
-            </picture>
+            <a href="/">
+                <picture>
+                    <source srcset="<?php echo $_ENV['HOST'] . '/build/img/logo.webp'; ?>" type="image/webp">
+                    <source srcset="<?php echo $_ENV['HOST'] . '/build/img/logo.png'; ?>" type="image/png">
+                    <img class="navegacion__logo" loading="lazy" width="200" height="300" src="<?php echo $_ENV['HOST'] . '/build/img/logo.png'; ?>" alt="Logo Refranes">
+                </picture>
+            </a>
 
             <a href="#" class="navegacion__menu">
                 <img class="navegacion__enlace-logosvg" src="/build/img/svgMenu.svg" alt="Logo Menu">
@@ -22,7 +24,7 @@
         </div> <!--.navegacion__medio-->
 
         <div class="navegacion__derecha">
-            <a href="#" class="navegacion__enlace">
+            <a href="/nosotros" class="navegacion__enlace">
                 <p class="navegacion__enlace-texto">Nosotros</p>
                 <img class="navegacion__enlace-logosvg" src="/build/img/svgNosotros.svg" alt="Logo Menu">
             </a>

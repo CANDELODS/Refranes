@@ -30,7 +30,10 @@ $router->post('/reestablecer', [AuthController::class, 'reestablecer']);
 $router->get('/mensaje', [AuthController::class, 'mensaje']);
 $router->get('/confirmar-cuenta', [AuthController::class, 'confirmar']);
 
+
+//Área Pública
 $router->get('/', [PrincipalController::class, 'principal']);
+$router->get('/nosotros', [PrincipalController::class, 'nosotros']);
 
 
 $router->comprobarRutas();

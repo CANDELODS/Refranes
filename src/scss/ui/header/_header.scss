@@ -33,6 +33,12 @@
         font-weight: v.$bold;
         cursor: pointer;
         gap: .5rem;
+
+        &:hover{
+            transform: scale(1.1); // Aumenta ligeramente el tamaño del SVG
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); // Efecto de sombra en hover
+            transition: all 0.3s ease-in-out;
+        }
     }
     &__enlace-logosvg{
         width: 3rem;
@@ -99,6 +105,12 @@
         text-decoration: none;
         gap: .5rem;
         margin-right: 1rem;
+
+        &:hover{
+            transform: scale(1.1); // Aumenta ligeramente el tamaño del SVG
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); // Efecto de sombra en hover
+            transition: all 0.3s ease-in-out;
+        }
 
         @include m.tablet{
             gap: .5rem;

@@ -419,6 +419,11 @@ body::-webkit-scrollbar-thumb {
   cursor: pointer;
   gap: 0.5rem;
 }
+.navegacion__menu:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
 .navegacion__enlace-logosvg {
   width: 3rem;
   height: 2rem;
@@ -486,6 +491,11 @@ body::-webkit-scrollbar-thumb {
   text-decoration: none;
   gap: 0.5rem;
   margin-right: 1rem;
+}
+.navegacion__enlace:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
 }
 @media (min-width: 768px) {
   .navegacion__enlace {
@@ -673,5 +683,63 @@ body::-webkit-scrollbar-thumb {
 }
 .acciones__span {
   font-weight: 700;
+}
+
+.nosotros__titulo {
+  text-align: center;
+  font-size: 3.5rem;
+}
+.nosotros__grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: center;
+}
+@media (min-width: 768px) {
+  .nosotros__grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "imagen parrafos" "imagen parrafos";
+  }
+}
+.nosotros__img {
+  width: 25rem;
+}
+@media (min-width: 768px) {
+  .nosotros__img {
+    grid-area: imagen;
+    width: 100%;
+  }
+}
+.nosotros__parrafo {
+  width: min(95%, 140rem);
+  margin: 0 auto;
+  font-size: 1.6rem;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .nosotros__parrafo {
+    grid-area: parrafos;
+  }
+}
+@media (min-width: 768px) {
+  .nosotros__parrafo--uno {
+    margin-top: 10rem;
+  }
+}
+.nosotros__frase {
+  width: min(95%, 140rem);
+  margin: 0 auto;
+  background-color: rgba(26, 27, 21, 0.4745098039);
+  border-radius: 1rem;
+}
+.nosotros__parrafo-frase {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1.6rem;
+  padding: 0.5rem;
+  text-align: center;
 }
 /*# sourceMappingURL=app.css.map */

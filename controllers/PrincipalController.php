@@ -10,4 +10,10 @@ class PrincipalController{
             'titulo' => 'Refranes'
         ]);
     }
+
+    public static function nosotros(Router $router){
+        $router->render('nosotros/nosotros',[
+            'titulo' => 'Nosotros'
+        ]);
+    }
 }

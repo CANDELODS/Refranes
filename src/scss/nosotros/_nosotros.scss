@@ -1,0 +1,61 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.nosotros{
+
+    &__titulo{
+        text-align: center;
+        font-size: 3.5rem;
+    }
+    &__grid{
+        @include m.grid(1, 1rem);
+        justify-items: center;
+
+        @include m.tablet{
+            @include m.grid(2, 1rem);
+            grid-template-rows: 50% 50%; //2 Filas (Imagen) (Parrafos)
+            grid-template-areas: "imagen parrafos" //Fila 1
+                        "imagen parrafos"; //Fila 2
+
+        }
+    }
+    &__img{
+        width: 25rem;
+
+        @include m.tablet{
+            grid-area: imagen;
+            width: 100%;
+        }
+    }
+    &__parrafo{
+        @include m.contenedor;
+        font-size: 1.6rem;
+        text-align: center;
+
+        @include m.tablet{
+            grid-area: parrafos;       
+        }
+        &--uno{
+            @include m.tablet{
+                margin-top: 10rem;
+            }
+        }
+        &--dos{
+            @include m.tablet{
+               
+            }
+        }
+    }
+    &__frase{
+        @include m.contenedor;
+        background-color: v.$negro50;
+        border-radius: 1rem;
+    }
+    &__parrafo-frase{
+        color: v.$blanco;
+        font-weight: v.$bold;
+        font-size: 1.6rem;
+        padding: .5rem;
+        text-align: center;
+    }
+}
