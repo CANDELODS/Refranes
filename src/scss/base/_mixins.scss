@@ -64,6 +64,11 @@
     margin: 0 auto;
 }
 
+@mixin contenedor-form{
+    width: min(90%, 60rem);
+    margin: 0 auto;
+}
+
 @mixin contenedor-smCard{
     width: min(60%, 60rem);
     margin: 0 auto;

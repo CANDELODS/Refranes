@@ -1,34 +1,68 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
-.login{
-    @include m.contenedor-sm;
+.login {
+    @include m.contenedor-form;
     margin-top: 1.5rem;
     border: 1px solid v.$azul;
     border-radius: 5rem;
-    &__flex-arriba{
+
+    &__flex-arriba {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    &__logo{
-        width: 6rem;
+
+    &__logo {
+        width: 5rem;
+
+        @include m.tablet {
+            width: 6rem;
+        }
     }
-    &__titulo{
+
+    &__titulo {
         color: v.$azul;
         text-transform: uppercase;
         font-weight: v.$bold;
+        font-size: 2rem;
+
+        @include m.tablet {
+            font-size: 3rem;
+        }
     }
-    &__acciones{
+
+    &__acciones {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
     }
-    &__parrafo{
+
+    &__parrafo {
         color: #7D7D7D;
     }
-    &__enlace{
-        text-decoration: none;
+
+    &__enlace {
         color: v.$azul;
+
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, v.$amarillo, v.$azul, v.$rojo);
+            z-index: 1;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        &:hover::before {
+            transform: scaleX(1);
+        }
     }
 }

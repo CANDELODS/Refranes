@@ -370,7 +370,7 @@ body::-webkit-scrollbar-thumb {
 
 .footer {
   background-color: #007DF4;
-  margin-top: 5rem;
+  margin-top: 2rem;
   color: #FFFFFF;
 }
 .footer__copyright {
@@ -418,11 +418,23 @@ body::-webkit-scrollbar-thumb {
   font-weight: 700;
   cursor: pointer;
   gap: 0.5rem;
+  position: relative;
 }
-.navegacion__menu:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease-in-out;
+.navegacion__menu::before {
+  content: "";
+  position: absolute;
+  bottom: 15%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #FFFFFF;
+  z-index: 1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+}
+.navegacion__menu:hover::before {
+  transform: scaleX(1);
 }
 .navegacion__enlace-logosvg {
   width: 3rem;
@@ -491,11 +503,27 @@ body::-webkit-scrollbar-thumb {
   text-decoration: none;
   gap: 0.5rem;
   margin-right: 1rem;
+  position: relative;
 }
-.navegacion__enlace:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease-in-out;
+.navegacion__enlace::before {
+  content: "";
+  position: absolute;
+  bottom: -20%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #FFFFFF;
+  z-index: 1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+}
+.navegacion__enlace:hover::before {
+  transform: scaleX(1);
+}
+.navegacion__enlace--cuenta::before {
+  bottom: -10%;
+  width: 96%;
 }
 @media (min-width: 768px) {
   .navegacion__enlace {
@@ -686,7 +714,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .formulario {
-  width: min(95%, 60rem);
+  width: min(90%, 60rem);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -697,9 +725,15 @@ body::-webkit-scrollbar-thumb {
   width: min(95%, 140rem);
   margin: 0 auto;
   height: 0.07rem;
-  width: 100%;
+  width: 90%;
   background-color: #D9D9D9;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .formulario__barra {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
 }
 .formulario__campo {
   display: flex;
@@ -707,13 +741,43 @@ body::-webkit-scrollbar-thumb {
   width: 80%;
 }
 .formulario__check {
-  margin-left: 2rem;
+  margin: 0.5rem 0 0 0.5rem;
   font-weight: 700;
   font-size: 1.6rem;
 }
+.formulario__check:hover {
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .formulario__check {
+    margin-left: 0.5rem;
+  }
+}
 .formulario__enlace {
-  text-decoration: none;
   color: #007DF4;
+  font-size: 1.6rem;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .formulario__enlace {
+    font-size: 1.8rem;
+  }
+}
+.formulario__enlace::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #FFFF2F, #007DF4, #E00200);
+  z-index: 1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+}
+.formulario__enlace:hover::before {
+  transform: scaleX(1);
 }
 .formulario__input {
   width: 100%;
@@ -726,8 +790,14 @@ body::-webkit-scrollbar-thumb {
 }
 .formulario__centro {
   display: flex;
-  gap: 17rem;
+  gap: 4rem;
   margin: 2rem 0;
+  margin-left: 1rem;
+}
+@media (min-width: 768px) {
+  .formulario__centro {
+    gap: 17rem;
+  }
 }
 .formulario__submit {
   background-color: #007DF4;
@@ -752,7 +822,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .login {
-  width: min(95%, 60rem);
+  width: min(90%, 60rem);
   margin: 0 auto;
   margin-top: 1.5rem;
   border: 1px solid #007DF4;
@@ -764,12 +834,23 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
 }
 .login__logo {
-  width: 6rem;
+  width: 5rem;
+}
+@media (min-width: 768px) {
+  .login__logo {
+    width: 6rem;
+  }
 }
 .login__titulo {
   color: #007DF4;
   text-transform: uppercase;
   font-weight: 700;
+  font-size: 2rem;
+}
+@media (min-width: 768px) {
+  .login__titulo {
+    font-size: 3rem;
+  }
 }
 .login__acciones {
   display: flex;
@@ -780,8 +861,24 @@ body::-webkit-scrollbar-thumb {
   color: #7D7D7D;
 }
 .login__enlace {
-  text-decoration: none;
   color: #007DF4;
+  position: relative;
+}
+.login__enlace::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #FFFF2F, #007DF4, #E00200);
+  z-index: 1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+}
+.login__enlace:hover::before {
+  transform: scaleX(1);
 }
 
 .nosotros__titulo {
