@@ -39,7 +39,7 @@
         placeholder="Repite Tu Contraseña">
 </div>
 
-<label class="formulario__label">Foto De Perfil (Formato png, jpg)</label>
+<label class="formulario__label formulario__label--label-imagen">Foto De Perfil (Formato png, jpg)</label>
 
 <div class="formulario__campo formulario__campo--imagen">
         <input

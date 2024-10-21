@@ -113,11 +113,15 @@
             padding: 0.625rem 1.25rem;
             color: v.$blanco;
             background-color: v.$azul;
-            position: relative;
-            right: 5.5rem;
+            // position: relative;
+            // right: 5.5rem;
+            margin-left: inherit;
         }
-        @include m.tablet{
-            margin-left: 5.5rem;
+
+        &--label-imagen{
+            @include m.tablet{
+                margin-left: 5.3rem;
+            }
         }
     }
 

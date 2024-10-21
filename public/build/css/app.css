@@ -817,12 +817,11 @@ body::-webkit-scrollbar-thumb {
   padding: 0.625rem 1.25rem;
   color: #FFFFFF;
   background-color: #007DF4;
-  position: relative;
-  right: 5.5rem;
+  margin-left: inherit;
 }
 @media (min-width: 768px) {
-  .formulario__label {
-    margin-left: 5.5rem;
+  .formulario__label--label-imagen {
+    margin-left: 5.3rem;
   }
 }
 .formulario__centro {
