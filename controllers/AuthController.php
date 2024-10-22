@@ -102,7 +102,7 @@ class AuthController {
 
         // Render a la vista
         $router->render('auth/registro', [
-            'titulo' => 'Crea tu cuenta en DevWebcamp',
+            'titulo' => 'Crea tu cuenta en Refranes',
             'usuario' => $usuario, 
             'alertas' => $alertas
         ]);
@@ -199,7 +199,7 @@ class AuthController {
         
         // Muestra la vista
         $router->render('auth/reestablecer', [
-            'titulo' => 'Reestablecer Password',
+            'titulo' => 'Reestablecer Contraseña',
             'alertas' => $alertas,
             'token_valido' => $token_valido
         ]);
@@ -239,7 +239,7 @@ class AuthController {
      
 
         $router->render('auth/confirmar', [
-            'titulo' => 'Confirma tu cuenta DevWebcamp',
+            'titulo' => 'Confirma tu cuenta de Refranes',
             'alertas' => Usuario::getAlertas()
         ]);
     }

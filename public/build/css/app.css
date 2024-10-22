@@ -973,6 +973,30 @@ body::-webkit-scrollbar-thumb {
   transform: scaleX(1);
 }
 
+.alerta {
+  padding: 1.5rem 1.5rem 1.5rem 3rem;
+  text-transform: uppercase;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.alerta__error {
+  background-color: #E00200;
+  border-left: 0.5rem solid #E00200;
+  color: #FFFFFF;
+  border-radius: 10rem;
+  width: 80%;
+  margin: 1rem auto;
+}
+.alerta__exito {
+  background-color: #007DF4;
+  border-left: 0.5rem solid #007DF4;
+  color: #FFFFFF;
+  border-radius: 10rem;
+  width: 80%;
+  margin: 1rem auto;
+}
+
 .nosotros__titulo {
   text-align: center;
   font-size: 3.5rem;

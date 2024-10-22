@@ -3,7 +3,8 @@
         type="text"
         class="formulario__input"
         name="nombre" id="nombre"
-        placeholder="Nombres">
+        placeholder="Nombres"
+        value="<?php echo $usuario->nombre;?>">
 </div>
 
 <div class="formulario__campo">
@@ -11,7 +12,8 @@
         type="text"
         class="formulario__input"
         name="apellido" id="apellido"
-        placeholder="Apellidos">
+        placeholder="Apellidos"
+        value="<?php echo $usuario->apellido;?>">
 </div>
 
 
@@ -20,7 +22,8 @@
         type="email"
         class="formulario__input"
         name="email" id="email"
-        placeholder="Correo Electrónico">
+        placeholder="Correo Electrónico"
+        value="<?php echo $usuario->email;?>">
 </div>
 
 <div class="formulario__campo">

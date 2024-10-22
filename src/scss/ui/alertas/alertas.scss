@@ -1,0 +1,25 @@
+@use '../../base/variables' as v;
+
+.alerta{
+    padding: 1.5rem 1.5rem 1.5rem 3rem;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    font-weight: v.$bold;
+    &__error{
+        background-color: v.$rojo;
+        border-left: .5rem solid v.$rojo;
+        color: v.$blanco;
+        border-radius: 10rem;
+        width: 80%;
+        margin: 1rem auto;
+    }
+    &__exito{
+        background-color: v.$azul;
+        border-left: .5rem solid v.$azul;
+        color: v.$blanco;
+        border-radius: 10rem;
+        width: 80%;
+        margin: 1rem auto;
+    }
+}
