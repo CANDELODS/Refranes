@@ -36,18 +36,19 @@
 
 <div class="formulario__campo">
     <input
-        type="password2"
+        type="password"
         class="formulario__input"
         name="password2" id="password2"
         placeholder="Repite Tu Contraseña">
 </div>
 
-<label class="formulario__label formulario__label--label-imagen">Foto De Perfil (Formato png, jpg)</label>
+<label class="formulario__label formulario__label--label-imagen">Foto De Perfil (Formato png, jpg) No Es Obligatoria</label>
 
 <div class="formulario__campo formulario__campo--imagen">
         <input
         type="file"
         class="formulario__input formulario__input--file"
+        accept="image/jpeg, image/png"
         name="imagen" id="imagen">
         <label class="formulario__label formulario__label--imagen" for="imagen"><span>Seleccionar Archivo</span></label>
 </div>

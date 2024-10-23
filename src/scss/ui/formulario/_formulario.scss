@@ -27,6 +27,11 @@
 
     }
 
+    &__parrafo{
+        @include m.formatear();
+        
+    }
+
     &__campo {
         display: flex;
         align-items: center;

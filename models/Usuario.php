@@ -4,7 +4,7 @@ namespace Model;
 
 class Usuario extends ActiveRecord {
     protected static $tabla = 'usuario';
-    protected static $columnasDB = ['id', 'nombre', 'apellido', 'email', 'password', 'confirmado', 'token', 'admin'];
+    protected static $columnasDB = ['id', 'nombre', 'apellido', 'email', 'password', 'imagen', 'confirmado', 'token', 'admin'];
 
     public $id;
     public $nombre;
@@ -12,6 +12,7 @@ class Usuario extends ActiveRecord {
     public $email;
     public $password;
     public $password2;
+    public $imagen;
     public $confirmado;
     public $token;
     public $admin;
@@ -28,9 +29,10 @@ class Usuario extends ActiveRecord {
         $this->email = $args['email'] ?? '';
         $this->password = $args['password'] ?? '';
         $this->password2 = $args['password2'] ?? '';
+        $this->imagen = $args['imagen'] ?? '';
         $this->confirmado = $args['confirmado'] ?? 0;
         $this->token = $args['token'] ?? '';
-        $this->admin = $args['admin'] ?? '';
+        $this->admin = $args['admin'] ?? 0;
     }
 
     // Validar el Login de Usuarios
@@ -89,6 +91,20 @@ class Usuario extends ActiveRecord {
         }
         if(strlen($this->password) < 6) {
             self::$alertas['error'][] = 'La contraseña debe contener al menos 6 caracteres';
+        }
+        return self::$alertas;
+    }
+
+    //Valida El Password Y El Password 2
+    public function validarPasswords() {
+        if(!$this->password) {
+            self::$alertas['error'][] = 'La contraseña no puede ir vacia';
+        }
+        if(strlen($this->password) < 6) {
+            self::$alertas['error'][] = 'La contraseña debe contener al menos 6 caracteres';
+        }
+        if($this->password !== $this->password2) {
+            self::$alertas['error'][] = 'Las contraseñas son diferentes';
         }
         return self::$alertas;
     }

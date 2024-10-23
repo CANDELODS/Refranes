@@ -12,7 +12,7 @@
         <h3 class="login__titulo">Refránes Colombianos</h3>
     </div>
 
-    <form method="post" action="/registro" class="formulario">
+    <form method="post" action="/registro" class="formulario" enctype="multipart/form-data">
         <div class="formulario__barra formulario__barra--registro"></div>
 
         <?php include_once __DIR__ . '/../templates/formularioRegistro.php'; ?>
