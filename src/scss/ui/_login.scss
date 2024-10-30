@@ -8,6 +8,14 @@
     border-radius: 5rem;
 
     &--mantener{
+        height: 53rem;
+
+        @include m.tablet{
+            height: 55rem;
+        }
+    }
+
+    &--cmo{
         height: 35rem;
 
         @include m.tablet{

@@ -1,4 +1,4 @@
-<div class="login login--mantener">
+<div class="login login--cmo">
 
     <?php
     require_once __DIR__ . '/../templates/alertas.php';

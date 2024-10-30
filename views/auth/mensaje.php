@@ -1,4 +1,4 @@
-<div class="login login--mantener">
+<div class="login login--cmo">
 
     <div class="login__flex-arriba">
         <picture>

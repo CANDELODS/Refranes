@@ -869,10 +869,18 @@ body::-webkit-scrollbar-thumb {
   border-radius: 5rem;
 }
 .login--mantener {
-  height: 35rem;
+  height: 53rem;
 }
 @media (min-width: 768px) {
   .login--mantener {
+    height: 55rem;
+  }
+}
+.login--cmo {
+  height: 35rem;
+}
+@media (min-width: 768px) {
+  .login--cmo {
     height: 47rem;
   }
 }

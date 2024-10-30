@@ -95,8 +95,10 @@ class AuthController
             if (empty($alertas)) {
                 $existeUsuario = Usuario::where('email', $usuario->email);
                 //GUARDAR LAS IMAGENES
-                $imagen_png->save($carpeta_imagenes . '/' . $nombre_imagen . 'png');
-                $imagen_webp->save($carpeta_imagenes . '/' . $nombre_imagen . 'webp');
+                if(!empty($_POST['imagen'])){
+                    $imagen_png->save($carpeta_imagenes . '/' . $nombre_imagen . 'png');
+                    $imagen_webp->save($carpeta_imagenes . '/' . $nombre_imagen . 'webp');
+                }
 
                 if ($existeUsuario) {
                     Usuario::setAlerta('error', 'El Usuario ya esta registrado');
