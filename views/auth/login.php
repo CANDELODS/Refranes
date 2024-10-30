@@ -1,5 +1,8 @@
 <div class="login">
 
+    <?php
+    require_once __DIR__ . '/../templates/alertas.php';
+    ?>
     <div class="login__flex-arriba">
         <picture>
             <source srcset="<?php echo $_ENV['HOST'] . '/build/img/logo.webp'; ?>" type="image/webp">
@@ -10,7 +13,7 @@
         <h3 class="login__titulo">Refránes Colombianos</h3>
     </div>
 
-    <form action="" class="formulario">
+    <form method="post" action="/login" class="formulario">
         <div class="formulario__barra"></div>
 
         <?php include_once __DIR__ . '/../templates/formularioLogin.php'; ?>

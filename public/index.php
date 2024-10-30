@@ -4,6 +4,7 @@ require_once __DIR__ . '/../includes/app.php';
 
 use MVC\Router;
 use Controllers\AuthController;
+use Controllers\DashboardController;
 use Controllers\PrincipalController;
 
 $router = new Router();
@@ -34,6 +35,9 @@ $router->get('/confirmar-cuenta', [AuthController::class, 'confirmar']);
 //Área Pública
 $router->get('/', [PrincipalController::class, 'principal']);
 $router->get('/nosotros', [PrincipalController::class, 'nosotros']);
+
+//Área De Administración
+$router->get('/admin/dashboard', [DashboardController::class, 'index']);
 
 
 $router->comprobarRutas();
